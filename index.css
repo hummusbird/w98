@@ -31,7 +31,14 @@ body {
     image-rendering: pixelated;
 }
 
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.border_inset,
 button:active {
+    border-width: 3px;
     border-left: #000;
     border-top: #000;
     border-bottom: #efefef;
@@ -40,6 +47,7 @@ button:active {
 }
 
 .border {
+    border-width: 3px;
     background-color: #c0c0c0;
     border-right: #000;
     border-bottom: #000;
@@ -50,7 +58,7 @@ button:active {
 
 .window {
     color: black;
-    border-width: 4px;
+    border-width: 3px;
     min-width: 400px;
     max-width: fit-content;
     min-height: 200px;
@@ -58,9 +66,24 @@ button:active {
     padding-bottom: 20px;
 }
 
+.flex {
+    display: flex;
+}
+
+.verticalcontent {
+    width: min-content;
+    padding-right: 25px;
+    padding-top: 25px;
+    align-items: center;
+}
+
+.verticalcontent button {
+    margin-bottom: 10px;
+}
+
 .windowcontent {
     display: flex;
-    padding: 30px;
+    padding: 25px;
     padding-bottom: 0px;
     font-size: 175%;
     overflow: hidden;
@@ -116,17 +139,52 @@ button:active {
 
 .bigbutton {
     margin: auto;
-    border-width: 4px;
-    font-size: 30px;
-    width: 150px;
+    border-width: 3px;
+    font-size: 27.5px;
+    width: 240px;
     height: 50px;
     font-family: "w98";
 }
 
 .bigbutton:active {
-    border-width: 4px;
+    border-width: 3px;
 }
 
 .bigbutton:hover {
     cursor: pointer;
+}
+
+/** specific windows **/
+
+#welcometitle {
+    font-size: 300%;
+    white-space: nowrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 25px 25px 0 25px;
+}
+
+#welcometextarea {
+    border-width: 3px;
+    font-size: 150%;
+    font-family: "w98";
+    white-space: nowrap;
+    display: inline-flex;
+    resize: none;
+    background-color: rgb(255, 254, 192);
+
+    height: 250px;
+    width: 600px;
+
+    border-style: inset;
+    margin: 25px 25px 0px 25px;
+    padding: 20px;
+}
+
+#welcometextarea div {
+    margin: 15px;
+}
+
+#welcometextarea img {
+    height: 55px;
 }
