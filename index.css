@@ -59,9 +59,9 @@ button:active {
 .window {
     color: black;
     border-width: 3px;
-    min-width: 400px;
+    min-width: 550px;
     max-width: fit-content;
-    min-height: 200px;
+    min-height: 220px;
     max-height: fit-content;
     padding-bottom: 20px;
 }
@@ -141,7 +141,7 @@ button:active {
     margin: auto;
     border-width: 3px;
     font-size: 27.5px;
-    width: 240px;
+    width: 200px;
     height: 50px;
     font-family: "w98";
 }
