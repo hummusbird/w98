@@ -6,10 +6,18 @@
 }
 
 @font-face {
-    font-family: 'ms';
-    src: url('fonts/ms_sans_serif.woff');
-    src: url('fonts/ms_sans_serif.woff2');
-    src: url('fonts/MS\ Sans\ Serif.ttf');
+    font-family: "ms";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/ms_sans_serif.woff") format("woff");
+    src: url("fonts/ms_sans_serif.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "boldms";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/ms_sans_serif_bold.woff2") format("woff2");
 }
 
 .center {
@@ -19,25 +27,48 @@
     transform: translate(-50%, -50%);
 }
 
+.bottom {
+    position: sticky;
+    top: 100%;
+}
+
+.right {
+    position: sticky;
+    left: 100%;
+}
+
 body {
     overflow: hidden;
     background-color: #008080;
-    font-family: "w98";
+    font-family: "ms";
     padding: 0;
     margin: 0;
-    font-size: 16px;
+    font-size: 27.5px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     image-rendering: pixelated;
 }
 
+input[type=checkbox] {
+    margin: auto;
+    width: 25px;
+    height: 25px;
+}
+
 h3 {
+    font-family: "boldms";
     margin: 0;
     padding: 0;
 }
 
 .nodraw {
     display: none !important;
+}
+
+.spacer {
+    border-width: 1px !important;
+    height: 1px;
+    width: 100%;
 }
 
 .border_inset,
@@ -88,6 +119,7 @@ button:active {
 .windowcontent {
     display: flex;
     padding: 25px;
+    padding-top: 20px;
     padding-bottom: 0px;
     font-size: 175%;
     overflow: hidden;
@@ -102,6 +134,7 @@ button:active {
 }
 
 .titlebar {
+    font-family: "boldms";
     color: white;
     background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
     height: 30px;
@@ -112,7 +145,6 @@ button:active {
 
 .titlebar h2 {
     margin: auto 0 auto 5px;
-    font-size: 1.4em;
 }
 
 .titlebar img {
@@ -129,8 +161,8 @@ button:active {
     width: 25px;
     height: 25px;
     border-width: 3px;
-    font-size: 115%;
-    font-family: "w98";
+    font-size: 22.5px;
+    font-family: "ms";
     margin: 2.5px;
     right: 0;
     position: fixed;
@@ -144,10 +176,9 @@ button:active {
 .bigbutton {
     margin: auto;
     border-width: 3px;
-    font-size: 27.5px;
     width: 220px;
     height: 50px;
-    font-family: "w98";
+    font-family: "ms";
 }
 
 .bigbutton:active {
@@ -161,17 +192,24 @@ button:active {
 /** specific windows **/
 
 #welcometitle {
-    font-size: 300%;
     white-space: nowrap;
     margin-top: 0;
     margin-bottom: 0;
     padding: 25px 25px 0 25px;
 }
 
+p,
+button,
+h3,
+label,
+h2 {
+    font-size: 25px;
+    padding: 0;
+}
+
 #welcometextarea {
     border-width: 3px;
-    font-size: 150%;
-    font-family: "w98";
+    font-family: "ms";
     white-space: nowrap;
     display: inline-flex;
     resize: none;
@@ -179,8 +217,8 @@ button:active {
     background-size: 7.5px;
     /* background-color: rgb(255, 254, 192); */
 
-    height: 250px;
-    width: 600px;
+    height: 270px;
+    width: 620px;
 
     border-style: inset;
     margin: 20px 25px 0px 25px;
@@ -194,5 +232,3 @@ button:active {
 #welcometextarea img {
     height: 55px;
 }
-
-/** DITHERING **/
